@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    Hi-Life Greens Projects
+    <meta charset="UTF-8">
+    <title>User INfo</title>
+</head>
+<body>
+    <form  method = "get" action="{% url 'get_user_info' %}">
+        {% csrf_token %}
+        Flat Number :  <input type="text" name="flat_no" placeholder="flat_no" /></br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

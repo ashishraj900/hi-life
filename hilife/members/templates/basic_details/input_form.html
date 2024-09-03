@@ -1,0 +1,14 @@
+{% extends "index/index.html" %}
+
+{% block content %}
+<div align="center">
+    <form  method = "post" action="{% url 'add_user_info' %}">
+        {% csrf_token %}
+        First Name  :  <input type="text" name="first_name" placeholder="first_name" /></br>
+        Middle Name :  <input type="text" name="middle_name" placeholder="middle_name" /></br>
+        Last Name   :  <input type="text" name="last_name" placeholder="last_name" /></br>
+        Flat Number :  <input type="text" name="flat_no" placeholder="flat_no" /></br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+{% endblock content %}
