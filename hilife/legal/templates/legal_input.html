@@ -1,0 +1,39 @@
+{% extends "index/index.html" %}
+
+{% block content %}
+<div align="center" class="container">
+    <form  class="form-horizontal" method = "post" action="{% url 'add_user_info' %}">
+        {% csrf_token %}
+        <div class="form-group has-success">
+        <label class="control-label col-sm-2" for="flat_no">Flat No  : </label>
+            <div class="col-sm-6">
+            <input class="form-control"  type="text"  id="flat_no" name="flat_no" placeholder="flat_no" required/>
+            </div>
+        </div>
+        <div class="form-group has-success">
+        <label class="control-label col-sm-2" for="rera_com_data">RERA Complain date  : </label>
+            <div class="col-sm-6">
+            <input class="form-control" type="text" id="rera_com_data" name="rera_com_data"
+                   placeholder="RERA Complain Date" required/>
+            </div>
+        </div>
+        <div class="form-group has-success">
+        <label class="control-label col-sm-2" for="last_name">Date of RERA Order for Refund  : </label>
+            <div class="col-sm-6">
+            <input class="form-control" type="text" id="rera_refund" name="rera_refund"
+                   placeholder="Date of RERA Order for Refund" required/>
+            </div>
+        </div>
+        <div class="form-group has-success">
+        <label class="control-label col-sm-2" for="flat_no">Association Joining Date </label>
+            <div class="col-sm-6">
+            <input class="form-control" type="text" id="association_joining_data"
+                   name="association_joining_data" placeholder="Association Joining Date" required/>
+            </div>
+        </div>
+        <div class="col-sm-10">
+        <input  type="Submit" class="btn btn-success" value="Submit">
+        </div>
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,60 @@
+{% extends "index/index.html" %}
+
+{% block content %}
+<div align="center" class="container">
+    <form  class="form-horizontal" method = "post" action="{% url 'add_transaction_details' %}">
+        {% csrf_token %}
+        <div class="form-group has-success">
+        <label class="control-label col-sm-2" for="flat_no">Flat Number  : </label>
+            <div class="col-sm-6">
+            <input class="form-control"  type="text"  id="flat_no" name="flat_no"
+                   placeholder="Flat Number" required/>
+            </div>
+        </div>
+        <div class="form-group has-success">
+        <label class="control-label col-sm-2" for="purchase_date">Purchase Date : </label>
+            <div class="col-sm-6">
+            <input class="form-control" type="date" id="purchase_date" name="purchase_date"
+                   placeholder="Purchase Date" required/>
+            </div>
+        </div>
+        <div class="form-group has-success">
+        <label class="control-label col-sm-2" for="sad">Sale Agreement Date  : </label>
+            <div class="col-sm-6">
+            <input class="form-control" type="date" id="sad" name="sad"
+                   placeholder="Sale Agreement Date" required/>
+            </div>
+        </div>
+        <div class="form-group has-success">
+        <label class="control-label col-sm-2" for="sdd">Sale Deed Date : </label>
+            <div class="col-sm-6">
+            <input class="form-control" type="date" id="sdd" name="sdd" placeholder="Sale Deed Date" required/>
+            </div>
+        </div>
+        <div class="form-group has-success">
+        <label class="control-label col-sm-2" for="saecr">Sale Agreement EC Registration : </label>
+            <div class="col-sm-6">
+            <input class="form-control" type="date" id="saecr" name="saecr"
+                   placeholder="Sale Agreement EC Registration" required/>
+            </div>
+        </div>
+        <div class="form-group has-success">
+        <label class="control-label col-sm-2" for="sapn">Sales Person Name : </label>
+            <div class="col-sm-6">
+            <input class="form-control" type="text" id="sapn" name="sapn"
+                   placeholder="Sales Person Name" required/>
+            </div>
+        </div>
+        <div class="form-group has-success">
+        <label class="control-label col-sm-2" for="seller_type">Seller Type  : </label>
+            <div class="col-sm-6">
+            <input class="form-control" type="text" id="seller_type" name="seller_type"
+                   placeholder="Builder or Investor or Landlord"/>
+            </div>
+        </div>
+        <div class="col-sm-10">
+        <input  type="Submit" class="btn btn-success" value="Submit">
+        </div>
+    </form>
+</div>
+{% endblock content %}

@@ -25,5 +25,4 @@ class TransactionDetails(models.Model):
     date_of_register_sale_agreement = models.DateTimeField(blank=True)
     seller_name = models.TextField(max_length=50)
     seller_type = models.TextField(max_length=50)
-    doc_image = models.FileField(upload_to='files')
 

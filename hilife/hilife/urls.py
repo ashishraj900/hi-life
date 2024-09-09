@@ -23,6 +23,6 @@ urlpatterns = [
     path('', home_view, name='index_page'),
     path('basic_details/', basic_details),
     path('add_user_info/', add_user_info, name='add_user_info'),
-    path('get_user_info_flat_basis/', get_user_info_flat_basis, name='get_user_info_flat_basis'),
-    path('get_user_info/', get_user_info, name='get_user_info')
+    path('transaction_details/', transaction_details, name='transaction_details'),
+    path('add_transaction_details/', add_transaction_details, name='add_transaction_details')
 ]
